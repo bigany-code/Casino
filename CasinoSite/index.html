@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="assets/js/main.js"></script>
+    <title>CoinFlip</title>
+</head>
+
+<body onload="belepes();balanceMutatMain();">
+    <div id="main">
+        <div id="nav">
+            <ul id="nav-games">
+                <li class="active" id="coinflip"><a href="#">coinflip</a></li>
+                <li id="roulette"><a href="roulette.html">roulette</a></li>
+                <li id="crash"><a href="crash.html">crash</a></li>
+                <li id="mines"><a href="mines.html">mines</a></li>
+            </ul>
+
+            <ul class="navmenu" id="nav-menu">
+                <li id="deposit-withdraw"><a href="menu/d_w.html">deposit/withdraw</a></li>
+                <!-- <li id="messages"><a href="menu/messages.html">messages</a></li> -->
+                <li id="profile"><a href="menu/profile.html">profile</a></li>
+                <li id="signIn" class="right"><a onclick="LogINout()"><p  id="belep">Sign In</p></a></li>
+            </ul>
+
+        </div>
+        <div id="live-chat">
+            <div id="live-chat-content">
+                <p>game game game game game game game game</p>
+                <p>game</p>
+            </div>
+        </div>
+        <div id="container">
+            <div id="games-content">
+                <a id="balance" href="menu/d_w.html">balance: $<span id="penz">0</span></a>
+                <!-- Coinflip -->
+                <div id="Coinflip-game">
+                    <div id="coinAnim">
+                        <div class="side-a">
+                            <p>Heads</p>
+                        </div>
+                        <div class="side-b">
+                            <p>Tails</p>
+                        </div>
+                    </div>
+                    <!-- Last spin -->
+                    <br>
+                    <span id="coinKimenet"></span>
+                </div>
+                <br>
+                <div id="Coinflip-game-prev">
+                    <span id="e"></span>
+                    <span id="k"></span>
+                    <span id="h"></span>
+                    <span id="n"></span>
+                    <span id="o"></span>
+                </div>
+                <div id="Coinflip-game-betAmount"><br>
+                    <input type="number" name="coinBet" id="coinBet" class="betInput" value="0">
+                    <button class="amountButtons ButtonsAmount" id="by1" onclick="plusX(1)">+1</button>
+                    <button class="amountButtons ButtonsAmount" id="by10" onclick="plusX(10)">+10</button>
+                    <button class="amountButtons ButtonsAmount" id="by100" onclick="plusX(100)">+100</button>
+                    <button class="amountButtons ButtonsAmount" id="clear" onclick="plusX(0)">Clear</button>
+                    <br>
+                </div>
+                <div id="Coinflip-game-chooseSide">
+                    <br>
+                    <button class="amountButtons" id="betHeads" onclick="coinFlip(1)">Bet on heads</button>
+                    <button class="amountButtons" id="betTails" onclick="coinFlip(0)">Bet on talis</button>
+                </div>
+            </div>
+            <footer>
+                <div id="footer-content">
+                    <p>copyright stb</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/coinflip.js"></script>
+</body>
+
+</html>

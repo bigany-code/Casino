@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="assets/js/main.js"></script>
+    <title>Mines</title>
+</head>
+
+<body onload="belepes();balanceMutatMain();setPlayArea(4);">
+    <div id="main">
+        <div id="nav">
+            <ul id="nav-games">
+                <li id="coinflip"><a href="index.html">coinflip</a></li>
+                <li id="roulette"><a href="roulette.html">roulette</a></li>
+                <li id="crash"><a href="crash.html">crash</a></li>
+                <li class="active" id="mines"><a href="#">mines</a></li>
+            </ul>
+
+            <ul class="navmenu" id="nav-menu">
+                <li id="deposit-withdraw"><a href="menu/d_w.html">deposit/withdraw</a></li>
+                <!-- <li id="messages"><a href="menu/messages.html">messages</a></li> -->
+                <li id="profile"><a href="menu/profile.html">profile</a></li>
+                <li id="signIn" class="right"><a onclick="LogINout()">
+                        <p id="belep">Sign In</p>
+                    </a></li>
+            </ul>
+
+        </div>
+        <div id="live-chat">
+            <div id="live-chat-content">
+
+            </div>
+        </div>
+        <div class="mine-cont" id="container">
+            <div id="games-content">
+                <a id="balance" href="menu/d_w.html">balance: $<span id="penz">0</span></a>
+                <!-- mines -->
+                <div id="Mines-game">
+
+                </div>
+                <br>
+                <span id="minesKimenet"></span>
+                <br>
+
+                <!-- Buttons -->
+                <br>
+                <div id="playSize">
+                    <span>Play area:&ensp;&ensp;&ensp;</span>
+                    <button class="amountButtons ButtonsAmount" id="x3" onclick="setPlayArea(3)">3x3</button>
+                    <button class="amountButtons ButtonsAmount" id="x4" onclick="setPlayArea(4)">4x4</button>
+                    <button class="amountButtons ButtonsAmount" id="x5" onclick="setPlayArea(5)">5x5</button>
+                    <button class="amountButtons ButtonsAmount" id="x6" onclick="setPlayArea(6)">6x6</button>
+                    <button class="amountButtons ButtonsAmount" id="x8" onclick="setPlayArea(8)">8x8</button>
+                </div>
+                <br>
+                <div id="mineAmount">
+                    <a href="#info"><span>Mine amount:&ensp;&ensp;</span></a><span id="mas"></span>&ensp;&ensp;
+                    <button class="amountButtons ButtonsAmount" id="m1db" onclick="mineSetup(1)">1</button>
+                    <button class="amountButtons ButtonsAmount" id="m3db" onclick="mineSetup(3)">3</button>
+                    <button class="amountButtons ButtonsAmount" id="m5db" onclick="mineSetup(5)">5</button>
+                    <button class="amountButtons ButtonsAmount" id="m10db" onclick="mineSetup(10)">10</button>
+                    <button class="amountButtons ButtonsAmount" id="m20db" onclick="mineSetup(20)">20</button>
+
+                </div>
+                <div id="Mines-game-betAmount"><br>
+                    <input type="number" name="minesBet" id="minesBet" class="betInput" value="0">
+                    <button class="amountButtons ButtonsAmount" id="by1" onclick="plusX(1)">+1</button>
+                    <button class="amountButtons ButtonsAmount" id="by10" onclick="plusX(10)">+10</button>
+                    <button class="amountButtons ButtonsAmount" id="by100" onclick="plusX(100)">+100</button>
+                    <button class="amountButtons ButtonsAmount" id="clear" onclick="plusX(0)">Clear</button>
+                    <br>
+                </div>
+                <div id="Mines-game-chooseSide">
+                    <br>
+                    <button class="amountButtons" id="betMines" onclick="betOnMines()">Bet</button>
+                    <button class="amountButtons" id="cashOut" onclick="out()">CashOut</button>
+                    <button class="amountButtons" id="resetBoard" onclick="resetBoard()">Reset</button>
+                </div>
+            </div>
+            <footer class="mineFooter">
+                <div id="footer-content" class="mines-footer-content">
+                    <!-- <p>copyright stb</p> -->
+                    <p></p>
+                    <div id="info">
+                        <table id="minesMultiInfo">
+
+                        </table>
+                        <br>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/mines.js"></script>
+    <script src="assets/js/mineMulti.js"></script>
+</body>
+
+</html>

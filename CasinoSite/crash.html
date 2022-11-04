@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="assets/js/main.js"></script>
+    <title>Crash</title>
+</head>
+
+<body onload="belepes();balanceMutatMain()">
+    <div id="main">
+        <div id="nav">
+            <ul id="nav-games">
+                <li id="coinflip"><a href="index.html">coinflip</a></li>
+                <li id="roulette"><a href="roulette.html">roulette</a></li>
+                <li class="active" id="crash"><a href="#">crash</a></li>
+                <li id="mines"><a href="mines.html">mines</a></li>
+            </ul>
+
+            <ul class="navmenu" id="nav-menu">
+                <li id="deposit-withdraw"><a href="menu/d_w.html">deposit/withdraw</a></li>
+                <!-- <li id="messages"><a href="menu/messages.html">messages</a></li> -->
+                <li id="profile"><a href="menu/profile.html">profile</a></li>
+                <li id="signIn" class="right"><a onclick="LogINout()"><p id="belep">Sign In</p></a></li>
+            </ul>
+
+        </div>
+        <div id="live-chat">
+            <div id="live-chat-content">
+                <p>game game game game game game game game</p>
+                <p>game</p>
+            </div>
+        </div>
+        <div id="container">
+            <div id="games-content">
+                <a id="balance" href="menu/d_w.html">balance: $<span id="penz">0</span></a>
+                <div id="Crash-game">
+                   <!-- //Anim <div></div> -->
+                    <span id="szorzo">0</span> <!-- szorzo --> <br> <br>
+                    <span id="crashKimenet"></span>
+                </div>
+                <br>
+                <div id="Crash-game-prev">
+                    elozo game
+                </div>
+                <div id="Crash-game-betAmount"><br>
+                    <br>
+                    <input type="number" name="crashBet" id="crashBet" class="betInput" value="0">
+                    <button class="amountButtons ButtonsAmount" id="by1" onclick="plusX(1)">+1</button>
+                    <button class="amountButtons ButtonsAmount" id="by10" onclick="plusX(10)">+10</button>
+                    <button class="amountButtons ButtonsAmount" id="by100" onclick="plusX(100)">+100</button>
+                    <button class="amountButtons ButtonsAmount" id="clear" onclick="plusX(0)">Clear</button>
+                    <br>
+                </div>
+                <div id="Crash-game-chooseSide">
+                    <br>
+                    <button class="amountButtons" id="betCrash" onclick="crash()">Bet</button>
+                    <button class="amountButtons" id="cashOut" onclick="out()">CashOut</button>
+                </div>
+            </div>
+            <footer>
+                <div id="footer-content">
+                    <p>copyright stb</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/crash.js"></script>
+
+</body>
+
+</html>

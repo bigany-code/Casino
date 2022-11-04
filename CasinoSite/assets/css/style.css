@@ -1,0 +1,929 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+:root {
+    --szin: red;
+    --coinButtonSize: 0.8em;
+    --depoBtn: 1em;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: rgb(238, 242, 247);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1em;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    /* overflow: hidden; */
+    background: rgba(0, 0, 0, 0.87);
+}
+
+#main {
+    margin: 0;
+    padding: 0;
+    /* display: block;
+    position: relative; */
+    font-size: 1.2rem;
+    scroll-behavior: smooth;
+    background: rgba(24, 24, 24, 0.685);
+}
+
+
+/* Games */
+
+#container {
+    position: relative;
+    display: inline-flex;
+    height: 130vh;
+    margin: 0;
+    padding: 0;
+    width: 81%;
+    border: 0;
+    background: rgb(24, 24, 24);
+}
+
+#games-content {
+    top: 65px;
+    height: fit-content;
+    width: 100%;
+    /* margin-left: 20px; */
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+
+/* CoinFlip */
+
+#Coinflip-game {
+    align-items: center;
+    margin-top: 50px;
+}
+
+#Coinflip-game-prev {
+    display: inline;
+}
+
+#Coinflip-game-betAmount input {
+    width: 15rem;
+}
+
+/* Roulette */
+#Roulette-game {
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+#Roulette-game p {
+    margin: 0;
+    padding: 0;
+    left: 0;
+}
+
+#Roulette-game-prev span {
+    margin-right: 3px;
+}
+
+/* Crash */
+#Crash-game {
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+#Crash-game p {
+    margin: 0;
+    padding: 0;
+    left: 0;
+}
+
+/* Chat */
+
+#live-chat {
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 65px;
+    display: flex;
+    float: left;
+    align-items: left;
+    place-content: left;
+    text-align: left;
+    height: 93vh;
+    width: 350px;
+    background: linear-gradient(0deg, rgb(130, 98, 245), rgb(92, 31, 204), rgb(68, 3, 219), rgb(47, 31, 90));
+}
+
+#live-chat-content {
+    margin-left: 20px;
+}
+
+
+/* Nav */
+
+#nav {
+    z-index: 1;
+    background: rgb(24, 23, 23);
+    height: 50px;
+    position: sticky;
+    top: 0;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+#nav ul {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+#nav-menu ul {
+    list-style-type: none;
+    display: inline-flex;
+
+}
+
+#nav li {
+    margin-left: 20px;
+}
+
+#nav li:hover {
+    cursor: pointer;
+    color: rgb(105, 48, 211);
+}
+
+#nav-menu {
+    display: inline-block;
+    float: right;
+    margin-right: 50px;
+}
+
+#balance {
+    position: relative;
+    height: 30px;
+    margin-left: 20px;
+    float: left;
+    min-width: max-content;
+    top: -50px;
+    padding: 10px;
+    background: linear-gradient(-30deg, rgb(130, 98, 245), rgb(92, 31, 204), rgb(68, 3, 219), rgb(47, 31, 90));
+    border-radius: 10px;
+}
+
+/* .navmenu a.active {
+    background-color: rgb(105, 48, 211);
+    color: white;
+} */
+#nav-menu li.active {
+    color: rgb(105, 48, 211);
+}
+
+#nav-menu li.active:hover {
+    color: white;
+}
+
+#nav-games li.active {
+    color: rgb(105, 48, 211);
+}
+
+#nav-games li.active:hover {
+    color: white;
+}
+
+
+/* Footer */
+
+footer {
+    margin: 0;
+    border: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 20vh;
+    background: rgba(17, 17, 17, 0.89);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer-content {
+    margin-left: 20px;
+}
+.mines-footer-content{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+
+/* Content */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Responsivity */
+
+@media screen and (max-width: 999px) {
+    #container {
+        width: 100%;
+    }
+
+    #live-chat {
+        width: 0px;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #nav {
+        display: none;
+    }
+
+    #live-chat {
+        top: 0;
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #container {
+        width: 64.55%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    #container {
+        width: 68%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #container {
+        width: 70.61%;
+    }
+
+}
+
+@media screen and (min-width: 1300px) {
+    #container {
+        width: 72.95%;
+    }
+
+}
+
+@media screen and (min-width: 1400px) {
+    #container {
+        width: 74.75%;
+    }
+
+}
+
+@media screen and (min-width: 1500px) {
+    #container {
+        width: 76.51%;
+    }
+
+}
+
+@media screen and (min-width: 1600px) {
+    #container {
+        width: 78%;
+    }
+
+}
+
+@media screen and (min-width: 1920px) {
+    #container {
+        width: 81.6%;
+    }
+
+}
+
+@media screen and (min-width: 2560px) {
+    #container {
+        width: 80.2%;
+    }
+
+    #live-chat {
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 3440px) {
+    #container {
+        width: 85.2%;
+    }
+
+    #live-chat {
+        width: 500px;
+    }
+}
+
+/* CoinFlip Animation */
+#coinAnim {
+    position: relative;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+
+#coinAnim div {
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
+    -moz-box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
+    box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
+}
+
+.side-a {
+    background: linear-gradient(-30deg, rgb(130, 98, 245), rgb(92, 31, 204), rgb(68, 3, 219), rgb(47, 31, 90));
+    color: white;
+    font-size: 2em;
+}
+
+.side-a p {
+    margin-top: 38%;
+}
+
+.side-b {
+    background: linear-gradient(-240deg, rgb(17, 27, 165), rgb(14, 49, 126), rgb(31, 114, 146), rgb(35, 171, 224));
+    color: white;
+    font-size: 2em;
+}
+
+.side-b p {
+    margin-top: 38%;
+}
+
+#coinAnim {
+    transition: -webkit-transform 1s ease-in;
+    -webkit-transform-style: preserve-3d;
+}
+
+#coinAnim div {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+}
+
+.side-a {
+    z-index: 100;
+}
+
+.side-b {
+    -webkit-transform: rotateY(-180deg);
+}
+
+#coinAnim.heads {
+    -webkit-animation: flipHeads 3s ease-out forwards;
+    -moz-animation: flipHeads 3s ease-out forwards;
+    -o-animation: flipHeads 3s ease-out forwards;
+    animation: flipHeads 3s ease-out forwards;
+}
+
+#coinAnim.tails {
+    -webkit-animation: flipTails 3s ease-out forwards;
+    -moz-animation: flipTails 3s ease-out forwards;
+    -o-animation: flipTails 3s ease-out forwards;
+    animation: flipTails 3s ease-out forwards;
+}
+
+@-webkit-keyframes flipHeads {
+    from {
+        -webkit-transform: rotateY(0);
+        -moz-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    to {
+        -webkit-transform: rotateY(1800deg);
+        -moz-transform: rotateY(1800deg);
+        transform: rotateY(1800deg);
+    }
+}
+
+@-webkit-keyframes flipTails {
+    from {
+        -webkit-transform: rotateY(0);
+        -moz-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    to {
+        -webkit-transform: rotateY(1980deg);
+        -moz-transform: rotateY(1980deg);
+        transform: rotateY(1980deg);
+    }
+}
+
+/*  Btn */
+.amountButtons {
+    position: relative;
+    cursor: pointer;
+    /* background:rgb(89, 44, 212); */
+    background: rgb(70, 146, 233);
+    color: white;
+    border: 0;
+    font-size: var(--coinButtonSize);
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 7px;
+}
+
+.amountButtons:hover {
+    background: rgb(123, 76, 233);
+}
+
+.amountButtons:disabled {
+    cursor: default;
+    background: rgb(110, 81, 189);
+    /* background:red; */
+    color: white;
+    opacity: 0.5;
+}
+
+#betHeads {
+    margin-right: 30px;
+}
+
+.ButtonsAmount {
+    margin-right: 3px;
+    background: rgb(70, 146, 233);
+}
+
+.betInput {
+    margin-right: 7px;
+    position: relative;
+    background: rgb(127, 101, 201);
+    color: white;
+    border: 0;
+    font-size: 0.7em;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.betInput:hover {
+    background: rgb(86, 19, 148);
+}
+
+.betInput:focus {
+    background: rgb(86, 19, 148);
+}
+
+#betPurple,
+#betGreen {
+    margin-right: 10px;
+}
+
+#betPurple {
+    font-weight: bold;
+    background: rgb(86, 19, 148);
+    margin-bottom: 10px;
+}
+
+#betGreen {
+    font-weight: bold;
+    background: rgb(66, 192, 123);
+    margin-bottom: 10px;
+
+}
+
+#betBlue {
+    font-weight: bold;
+    background: rgb(70, 146, 233);
+    margin-bottom: 10px;
+
+}
+
+#betPurple:hover,
+#betGreen:hover,
+#betBlue:hover {
+    background: rgb(195, 186, 216);
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+}
+
+#betPurple:disabled,
+#betGreen:disabled,
+#betBlue:disabled {
+    background: rgb(195, 186, 216);
+    color: rgb(10, 10, 10);
+    cursor: default;
+    opacity: 0.5;
+}
+
+#signIn {
+    /* margin: auto; */
+    background: linear-gradient(90deg, rgb(130, 228, 85), rgb(16, 209, 42));
+    border-radius: 8px;
+    height: 2rem;
+    width: 6em;
+    text-align: center;
+    margin-top: -2px;
+    ;
+
+}
+
+#signIn a {
+    /* margin: auto; */
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+}
+
+#signIn a p {
+    margin: auto;
+    margin-top: 3px;
+}
+
+#betCrash {
+    width: 5em;
+    font-weight: 500;
+}
+
+#cashOut {
+    display: none;
+}
+
+
+/* Slider Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(46, 44, 49);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#depoSW:checked+.slider {
+    background-color: rgb(92, 31, 204);
+}
+
+#depoSW:focus+.slider {
+    box-shadow: 0 0 1px rgb(92, 31, 204);
+}
+
+#depoSW:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Depo/With */
+#containerM {
+    width: 100%;
+    position: relative;
+    display: flex;
+    height: 130vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgb(24, 24, 24);
+}
+
+.spanDesign {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 200px;
+    padding-right: 200px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(92, 31, 204);
+    background: rgb(46, 44, 49);
+}
+
+.inputDW {
+    position: relative;
+    width: 515px;
+    height: 30px;
+    background: rgb(46, 44, 49);
+    color: white;
+    border: 0;
+    font-size: 0.7em;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(92, 31, 204);
+    z-index: 4;
+}
+
+.dw_p {
+    margin-left: -375px;
+}
+
+.dw_s {
+    margin-left: -375px;
+    margin-right: 10px;
+}
+
+#dwBtn {
+    font-size: var(--depoBtn);
+    margin-right: -430px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 12px;
+}
+
+.dw_c {
+    margin-left: -420px;
+}
+
+#dwpText {
+    color: rgb(130, 228, 85);
+}
+
+/* tmp changes */
+#live-chat {
+    display: none;
+    width: 0;
+}
+
+#container {
+    width: 100%;
+}
+
+.links {
+    float: left;
+    margin: 30px;
+}
+
+.links:hover {
+    color: rgba(179, 27, 209, 0.863)
+}
+
+/* Roulette */
+.rroller {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    width: 25000px;
+    height: 104px;
+    right: 0px;
+}
+
+.wraper {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin: auto;
+    /* margin-top: 250px; */
+    width: 520px;
+    /* width: 540px; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* border: 4px solid #1a96b7; */
+    border-radius: 2px;
+    height: 58px;
+}
+
+.rlist {
+    margin: 0;
+    padding: 0;
+    position: right;
+    margin-left: 230;
+    /* display:inline-block;   */
+    display: block;
+}
+
+.rlist li {
+
+    /* border: 4px solid transparent; */
+}
+
+.p,
+.b,
+.g {
+    margin: 0;
+    padding: 0;
+    width: 58px;
+    height: 58px;
+    list-style: none;
+    display: inline-block;
+    float: left;
+}
+
+
+.p {
+    /* background: linear-gradient(-30deg, rgb(130, 98, 245), rgb(92, 31, 204), rgb(68, 3, 219), rgb(47, 31, 90));
+    background:rgb(86, 19, 148); */
+    background:linear-gradient(135deg,rgb(119, 40, 192),rgb(79, 20, 218));
+}
+
+.b {
+    /* background: linear-gradient(-30deg, rgb(10, 127, 182), rgb(25, 164, 206), rgb(36, 213, 236), rgb(8, 243, 212));
+    background: rgb(70, 146, 233); */
+    background:linear-gradient(135deg,rgb(53, 128, 212),rgb(43, 185, 228));
+   
+}
+
+.g {
+    /* background: linear-gradient(-30deg, rgb(130, 228, 85), rgb(16, 209, 42));
+    background: rgb(66, 192, 123); */
+    background:linear-gradient(135deg,rgb(66, 192, 123), rgb(130, 228, 85));
+
+}
+
+.arrowup {
+
+    position: absolute;
+    bottom: 0;
+    right: 255px;
+    /*  right: 275px; */
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #ffffff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.arrowdown {
+
+    position: absolute;
+    top: 0;
+    right: 255px;
+    /*  right: 275px; */
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #ffffff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+/* Mines */
+#Mines-game {
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+#Mines-game p {
+    margin: 0;
+    padding: 0;
+    left: 0;
+}
+
+.minegrid {
+    background: linear-gradient(135deg, rgb(34, 34, 36), rgb(38, 50, 58));
+    border: 3px solid rgb(83, 80, 80);
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin: 0px 2px;
+    /* font-size: 2em; */
+    -webkit-transform-style: preserve-3d;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.minegrid div {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+}
+
+.playSide,
+.hiddenSide {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+
+/* Height */
+.mineFooter {
+    height: 25vh;
+}
+
+@media screen and (max-height: 1100px) {
+    .mine-cont {
+        height: 2000px;
+        min-height: 1250px;
+    }
+
+    /* .mineFooter {
+        min-height: 200px;
+    } */
+}
+
+@media screen and (max-height: 1200px) {
+    .mineFooter {
+        min-height: 280px;
+    }
+}
+
+/* Mines Animation */
+.hiddenSide {
+    -webkit-transform: rotateY(-180deg);
+    /* color: rgb(127, 66, 240); */
+}
+
+.revealer {
+    -webkit-animation: flip-vertical-right 100ms ease-in-out 5 both;
+    animation: flip-vertical-right 100ms ease-in-out 5 both;
+}
+
+@-webkit-keyframes flip-vertical-right {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    100% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes flip-vertical-right {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    100% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+}
+
+.invisBtn {
+    background: none;
+    margin: 0px 5px;
+    padding: 0;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font-size: 2em;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+}
+#resetBoard {
+    display: none;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+</head>
+
+<body>
+    <div id="main-div">
+        <section class="section" id="bank-info">
+            <p>Bank</p>
+            <div class="circle-div"><img id="bank-logo" src=""></div>
+        </section>
+        <section class="section" id="osszeg">
+            <div id="osszeg-megj">
+                <span class="error" id="kiirnev"></span><br>
+                <span class="error" id="kiir"></span><br>
+                <div class="circle-div" id="money">
+                    <span class="" id="kiirosszeg"></span><br>
+                </div>
+                <input type="number" name="kartyszam" id="kartyszam" maxlength="9" minlength="9">
+                <input type="submit" value="kuld" id="btnkuld" hidden>
+            </div>
+        </section>
+        <footer>
+            Elerhetoseg stb
+        </footer>
+    </div>
+    <script>
+        var osszegMegJ = document.getElementById("kiir");
+
+        var input = document.getElementById("kartyszam");
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("btnkuld").click();
+                var obj;
+                fetch("felt.php?kartya= " + input.value)
+                    .then((res) => res.json())
+                    .then((data) => (obj = data))
+                    .then(() => {
+                        // console.log(obj[0].osszeg)
+                        if (obj == "Rossz kartyaszam") {
+                            document.getElementById("kiirosszeg").innerText = "";
+                            document.getElementById("kiir").innerText = obj;
+                            document.getElementById("kiirnev").innerText = "Ehhez a kartyahoz nem tartozik felhasznalo"
+                        } else {
+                            document.getElementById("kiir").innerText = '';
+                            document.getElementById("kiirosszeg").innerText = "$"+obj[0].osszeg;
+                            document.getElementById("kiirnev").innerText = obj[0].uname;
+                        }
+                    });
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

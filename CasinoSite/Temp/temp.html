@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../assets/js/main.js"></script>
+    <title>Casino</title>
+</head>
+
+<body onload="belepes();balanceMutatMain();">
+    <div id="main">
+        <div id="nav">
+            <ul id="nav-games">
+                <li class="active" id="coinflip"><a href="#">coinflip</a></li>
+                <li id="roulette"><a href="roulette.html">roulette</a></li>
+                <li id="crash"><a href="crash.html">crash</a></li>
+            </ul>
+
+            <ul class="navmenu" id="nav-menu">
+                <li id="deposit-withdraw"><a href="menu/d_w.html">deposit/withdraw</a></li>
+                <li id="messages"><a href="menu/messages.html">messages</a></li>
+                <li id="profile"><a href="menu/profile.html">profile</a></li>
+                <li id="signIn" class="right"><a onclick="LogINout()"><p  id="belep">Sign In</p></a></li>
+            </ul>
+
+        </div>
+        <div id="live-chat">
+            <div id="live-chat-content">
+
+            </div>
+        </div>
+        <div id="container">
+            <div id="games-content">
+                <a id="balance" href="menu/d_w.html">balance: $<span id="penz">0</span></a>
+                <!-- Coinflip -->
+
+            </div>
+            <footer>
+                <div id="footer-content">
+                    <p>copyright stb</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
+

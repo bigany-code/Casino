@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- Anim -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <title>Roulette</title>
+</head>
+
+<body onload="belepes();balanceMutatMain()">
+    <div id="main">
+        <div id="nav">
+            <ul id="nav-games">
+                <li id="coinflip"><a href="index.html">coinflip</a></li>
+                <li class="active" id="roulette"><a href="#">roulette</a></li>
+                <li id="crash"><a href="crash.html">crash</a></li>
+                <li id="mines"><a href="mines.html">mines</a></li>
+            </ul>
+            <ul id="nav-menu">
+                <li id="deposit-withdraw"><a href="menu/d_w.html">deposit/withdraw</a></li>
+                <!-- <li id="messages"><a href="menu/messages.html">messages</a></li> -->
+                <li id="profile"><a href="menu/profile.html">profile</a></li>
+                <li id="signIn" class="right"><a onclick="LogINout()">
+                        <p id="belep">Sign In</p>
+                    </a></li>
+            </ul>
+        </div>
+        <div id="live-chat">
+            <div id="live-chat-content">
+                <p>game game game game game game game game</p>
+                <p>game</p>
+            </div>
+        </div>
+        <div id="container">
+            <div id="games-content">
+                <a id="balance" href="menu/d_w.html">balance: $<span id="penz">0</span></a>
+                <div id="Roulette-game">
+                    <!-- Animation -->
+                    <div class="wraper">
+                        <div class="arrowup"></div>
+                        <div class="arrowdown"></div>
+                        <div class="rroller">
+                            <ul class="rlist">
+
+                            </ul>
+                            <ul class="rlist">
+                                <li class="b"></li>
+                                <li class="p"></li>
+                                <li class="b"></li>
+                                <li class="p"></li>
+                                <li class="g"></li>
+                                <li class="b"></li>
+                                <li class="p"></li>
+                                <li class="b"></li>
+                                <li class="p"></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <p style="text-align: center">
+                        <button class="roulettespinbtn">Spin</button> -->
+                    <div class="win">
+                        <ul>
+
+                        </ul>
+                    </div>
+                    <!-- Last spin -->
+                    <br>
+                    <span id="rouletteKimenet"></span>
+                </div>
+                <div id="Roulette-game-prev"><br>
+                    <span id="Re">o</span>
+                    <span id="Rk">o</span>
+                    <span id="Rh">o</span>
+                    <span id="Rn">o</span>
+                    <span id="Ro">o</span>
+                    <span id="R6">o</span>
+                    <span id="R7">o</span>
+                    <span id="R8">o</span>
+                    <span id="R9">o</span>
+                    <span id="R10">o</span>
+                    <span id="R11">o</span>
+                    <span id="R12">o</span>
+                    <span id="R13">o</span>
+                    <span id="R14">o</span>
+                    <span id="R15">o</span>
+                </div>
+                <div id="Roulette-game-betAmount"><br>
+                    <input type="number" name="rouletteBet" id="rouletteBet" class="betInput" value="0">
+                    <button class="amountButtons ButtonsAmount" id="by1" onclick="plusX(1)">+1</button>
+                    <button class="amountButtons ButtonsAmount" id="by10" onclick="plusX(10)">+10</button>
+                    <button class="amountButtons ButtonsAmount" id="by100" onclick="plusX(100)">+100</button>
+                    <button class="amountButtons ButtonsAmount" id="clear" onclick="plusX(0)">Clear</button>
+                    <br>
+                </div>
+                <div id="Roulette-game-chooseBet">
+                    <br>
+                    <button class="amountButtons roll" id="betPurple" onclick="roulette(0)">Bet on Purple</button>
+                    <button class="amountButtons roll" id="betGreen" onclick="roulette(2)">Bet on Green</button>
+                    <button class="amountButtons roll" id="betBlue" onclick="roulette(1)">Bet on Blue</button>
+                </div>
+            </div>
+            <footer>
+                <div id="footer-content">
+                    <p>copyright stb</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script src="assets/js/roulette.js"></script>
+    <script>
+        /*
+                let btn = document.querySelector("#asd")
+                var x;
+                $(document).ready(function () {
+                    for (i = 0; i < 3; i++) {
+                        $(".rlist li").clone().appendTo(".rlist");
+                    }
+                    $('.roll').click(function () {
+                        $('.rroller').css({
+                            right: "0"
+                        })
+                        $('.rlist li').css({
+                            border: '4px solid transparent'
+                        })
+                        function selfRandom(min, max) {
+                            let yx = Math.floor(Math.random() * (max - min + 1)) + min;
+                            return yx
+                        }
+                        x = selfRandom(50, 100);
+                        // x = 70
+                        // console.log(x)
+                        $('.rlist li:eq(' + x + ')').css({
+                            // border: '4px solid #ffffff'
+                        })
+                        var offset = selfRandom(200, 240)
+                        checkResultColor(x)
+        
+                        $('.rroller').animate({
+                            right: ((x * 50) + (x * 8 - 12) - offset)
+                        }, 10000);
+                    });
+                });
+                let kektomb = [50, 52, 54, 56, 59, 61, 63, 65, 68, 70, 72, 74, 77, 79, 81, 83, 86, 88, 90, 92, 95, 97, 99]
+                let lilatomb = [51, 53, 55, 57, 60, 62, 64, 66, 69, 71, 73, 75, 78, 80, 82, 84, 87, 89, 91, 93, 96, 98, 100]
+                let zoldtomb = []
+                for (let i = 58; i < 101; i += 9) {
+                    zoldtomb.push(i)
+                }
+                kektomb.splice(kektomb.length - 4, 4)
+                lilatomb.splice(lilatomb.length - 4, 4)
+        
+                function checkResultColor(x) {
+                    if (lilatomb.some(a => a.toString().includes(x))) {
+                        prevGameResult = "Purple"
+                        prevGameResultInColor = "rgb(86, 19, 148)"
+                        flipResult = 0
+        
+                    }
+                    if (kektomb.some(a => a.toString().includes(x))) {
+                        prevGameResult = "Blue"
+                        prevGameResultInColor = "rgb(70, 146, 233)"
+                        flipResult = 1
+                    }
+                    if (zoldtomb.some(a => a.toString().includes(x))) {
+                        prevGameResult = "Green"
+                        prevGameResultInColor = "rgb(66, 192, 123)"
+                        flipResult = 2
+                    }
+        
+                    resetSpinAnim()
+                    return flipResult
+        
+                }
+                function resetSpinAnim() {
+                    setTimeout(() => {
+                        $('.rroller').css({
+                            right: "0"
+                        })
+                    }, 15000)
+                }
+        */
+    </script>
+</body>
+
+</html>

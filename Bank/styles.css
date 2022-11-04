@@ -1,0 +1,106 @@
+:root {
+    --height: 270vh;
+}
+
+body {
+    font-size: 4em;
+    color: white;
+    height: var(--height);
+    margin: 0;
+    width:100%;
+}
+
+#main-div{
+    align-items: center;
+}
+section {
+    position: relative;
+    background: rgba(2, 2, 2, 0.842);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    margin: auto;
+    height: 110vh;
+    width: 100%;
+    place-content: center;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+}
+footer{
+    position: relative;
+    background: rgba(2, 2, 2, 0.842);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    margin: auto;
+    height: 50vh;
+    width: 100%;
+    place-content: center;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+}
+
+#osszeg {
+    background: rgb(176, 240, 229);
+}
+
+.circle-div {
+    font-size: 7rem;
+    width:200%;
+    height:200%;
+    border-radius: 50%;;
+    background: rgb(192, 187, 187);
+    display:inline-block;
+    margin-left:-50%;
+    text-align: center;
+    justify-content: center;
+    place-content: center;
+
+}
+p{
+    position: relative;
+    place-content: center;
+    margin: 0;
+    padding:0;
+    vertical-align: center;
+    text-align: center;
+    justify-content: center;
+}
+#kartyszam{
+    width:50vh;
+    height:10%;
+    border-width: 2px;
+    border-color: border;
+    border-radius:10px ;
+    text-indent: 10px;
+}
+.error{
+    font-size: 2rem;
+    color: rgba(209, 47, 47, 0.795);
+    font-weight: bold;
+}
+#money{
+    width:20rem;
+    height:20rem;
+    display:block;
+    position: relative;
+    margin:auto;
+    font-size: 3.5rem;
+    place-content: center;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+
+    
+}#kiirosszeg{
+    font-size: 2rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: green;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

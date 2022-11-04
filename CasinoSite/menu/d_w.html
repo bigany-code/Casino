@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/d_w.js" defer></script>
+    <title>Deposit/Withdraw</title>
+</head>
+
+<body onload="belepes();balanceMutat()">
+    <div id="main">
+        <div id="nav">
+            <ul id="nav-games">
+                <li id="coinflip"><a href="../index.html">coinflip</a></li>
+                <li id="roulette"><a href="../roulette.html">roulette</a></li>
+                <li id="crash"><a href="../crash.html">crash</a></li>
+                <li id="mines"><a href="../mines.html">mines</a></li>
+            </ul>
+
+            <ul class="navmenu" id="nav-menu">
+                <li id="deposit-withdraw" class="active"><a href="#">deposit/withdraw</a></li> <!--  class="active" -->
+                <!-- <li id="messages"><a href="messages.html">messages</a></li> -->
+                <li id="profile"><a href="profile.html">profile</a></li>
+                <li id="signIn" class="right"><a onclick="LogINoutM()">
+                        <p id="belep">Sign In</p>
+                    </a></li>
+            </ul>
+
+        </div>
+        <div id="containerM">
+            <div id="games-content">
+                <form action="../assets/php/d_w.php" method="post">
+                    <span class="spanDesign">balance: $<span id="penz" class="penzM">0</span></span><br><br><br>
+                    <span class="dw_s" id="dws">Deposit: </span>
+                    <label class="switch"><input type="checkbox" name="depoSW" id="depoSW" value="withdraw"><span class="slider round"></span></label>
+                    <br><br>
+                    <p class="dw_p" id="dwpText">Deposit amount:</p>
+                    <input type="text" name="amountDW" id="amountDW" class="inputDW" required>
+                    <br>
+                    <p class="dw_p">Your card number:</p>
+                    <input type="text" name="cardNumber" id="cardNumber" class="inputDW" required>
+                    <p class="dw_c">Card Code:</p>
+                    <input type="text" name="cardCode" id="cardCode" class="inputDW" required>
+                    <br><br>
+                    <input type="hidden" name="uid" id="uid" value="999999999">
+                    <script language="javascript">
+                        document.getElementById("uid").value = getCookie("id");
+                    </script>
+                    <button type="submit" id="dwBtn" class="amountButtons"><span id="dwBtnText">Deposit</span></button>
+                    
+                </form>
+                <footer>
+                    <div id="footer-content">
+                        <p>copyright stb</p>
+                    </div>
+
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
