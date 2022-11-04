@@ -13,4 +13,4 @@ Database elérés:
       [^2]:$username = "";
       [^2]:$password = "";
       
-    [^2]:bank.sql és a casino.sql fájlok futtatása
+    bank.sql és a casino.sql fájlok futtatása
