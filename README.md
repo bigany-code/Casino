@@ -1,6 +1,6 @@
 # Casino
 
-Database elérés:
+#Database elérés:
   Bank/felt.php
      getdb() func belül értékek megadása
       $servername = "";
