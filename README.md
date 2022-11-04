@@ -1,7 +1,7 @@
 # Casino
 
 Database elérés:
-  Bank/felt.php
+   [^2]:Bank/felt.php
      getdb() func belül értékek megadása
       $servername = "";
       $username = "";
