@@ -1,9 +1,9 @@
 <?php
 function getdbBank()
 {
-    $servername = "localhost";
-    $username = "borok";
-    $password = "ASDqwe123";
+    $servername = "";
+    $username = "";
+    $password = "";
     $db = "bank";
     try {
         $con = mysqli_connect($servername, $username, $password, $db);
@@ -16,9 +16,9 @@ function getdbBank()
 }
 function getdbCasino()
 {
-    $servername = "localhost";
-    $username = "borok";
-    $password = "ASDqwe123";
+    $servername = "";
+    $username = "";
+    $password = "";
     $db = "casino";
     try {
         $con = mysqli_connect($servername, $username, $password, $db);

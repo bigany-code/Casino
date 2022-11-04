@@ -1,9 +1,9 @@
 <?php
 function getdb()
 {
-    $servername = "localhost";
-    $username = "borok";
-    $password = "ASDqwe123";
+    $servername = "";
+    $username = "";
+    $password = "";
     $db = "bank";
     try {
         $con = mysqli_connect($servername, $username, $password, $db);
