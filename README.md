@@ -12,5 +12,8 @@ Database elérés:
       $servername = "";
       $username = "";
       $password = "";
+      
+      
+Ez a project tanulás/gyakorlási okokból készült
 ``` 
     bank.sql és a casino.sql fájlok futtatása
